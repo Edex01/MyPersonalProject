@@ -94,5 +94,21 @@ for color in COLORS:
     if row > 36:
         row = 0
         col += 1
+          
+ # EXIT FUNCTION #
+#=========================================================================================================================#
+def ExitApplication():
+    MsgBox = messagebox.askquestion ('Exit Application','Are you sure you want to exit the application',icon = 'warning')
 
+    if MsgBox == 'yes':
+       root.destroy()
+
+    else:
+        messagebox.showinfo('Return','You will now return to the application screen')
+#=========================================================================================================================#
+
+# exit button
+ext = Button (root, text='Exit',command=ExitApplication,bg='brown',fg='white')
+ext.pack()
+          
 root.mainloop()
